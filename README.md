@@ -9,15 +9,15 @@
 ### 实现原理
 1. 对Appender进行扩展.
 2. 在Spring初始化时,找到LogContext,添加自定义的Appender(省掉开发人员在xml中配置Appender). 
-3. Appender最终目的是要进行落地,定义日志落地的:业务模型和接口. 
-4. 对业务模型的接口进行实现(http/kafka/rocketmq...)
-5. 开发人员只需要添加:业务模型和接口 + 实现依赖,即可实现:日志的收集. 
+3. Appender最终目的是要进行日志的落地,定义日志落地的:接口和业务模型. 
+4. 对接口和业务模型进行实现(http/kafka/rocketmq...)
+5. 开发人员只需要添加:接口(业务模型) + 实现依赖,即可实现:日志的收集落地. 
 
 ### 项目结构
 ```
 log-service-plugin
     log-service-plugin-core                  # 日志核心层
-    log-service-plugin-api-parent                # 日志api parent
+    log-service-plugin-api-parent            # 日志api parent
         log-service-plugin-api               # api定义
         log-service-plugin-http              # 通过http传输日志
         log-service-plugin-rocketmq          # 通过rocketmq传输日志
