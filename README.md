@@ -17,7 +17,7 @@
 ```
 log-service-plugin
     log-service-plugin-core                  # 日志核心层
-    log-service-plugin-parent                # 日志api parent
+    log-service-plugin-api-parent                # 日志api parent
         log-service-plugin-api               # api定义
         log-service-plugin-http              # 通过http传输日志
         log-service-plugin-rocketmq          # 通过rocketmq传输日志
